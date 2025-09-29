@@ -28,7 +28,7 @@ export default {
           800: '#155e75',
           900: '#164e63',
         },
-        // Deep blue restricted to accents only
+        // Deep blue only for accents, not backgrounds
         deepBlue: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -79,7 +79,7 @@ export default {
         },
         sand: {
           50: '#fffdfb',
-          100: '#fff9f0', // <- softened sandy beige
+          100: '#fff9f0', // soft light sand
           200: '#fff3e0',
           300: '#fce7c5',
           400: '#f8dca5',
@@ -88,7 +88,13 @@ export default {
           700: '#c99a52',
           800: '#a1783d',
           900: '#7c5a2d',
-        }
+        },
+        // Glow / Interaction accent colors
+        bioluminescent: '#00F5D4',
+        jellyfish: '#FF9FF3',
+        reefYellow: '#F9C74F',
+        pearl: '#F9FAFB',
+        charcoal: '#1F2937',
       },
       backdropBlur: {
         xs: '2px',
@@ -139,7 +145,7 @@ export default {
           border: '1px solid rgba(34, 197, 94, 0.15)',
         },
         '.glass-sand': {
-          background: 'rgba(255, 249, 240, 0.12)', // lighter sand tone
+          background: 'rgba(255, 249, 240, 0.12)',
           backdropFilter: 'blur(12px)',
           border: '1px solid rgba(255, 249, 240, 0.2)',
         },
