@@ -282,10 +282,10 @@ Focus on marine fish species. Provide accurate taxonomic classification and be s
     const hasChildren = node.children && node.children.length > 0;
 
     const levelColors = {
-      phylum: 'text-purple-800 bg-purple-100',
-      class: 'text-blue-800 bg-blue-100',
-      order: 'text-green-800 bg-green-100',
-      family: 'text-yellow-800 bg-yellow-100',
+      phylum: 'text-coral-800 bg-coral-100',
+      class: 'text-ocean-800 bg-ocean-100',
+      order: 'text-seaweed-800 bg-seaweed-100',
+      family: 'text-fishOrange-800 bg-fishOrange-100',
       species: 'text-ocean-800 glass-ocean'
     };
 

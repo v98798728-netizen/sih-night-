@@ -133,8 +133,8 @@ For complete documentation, visit our online portal.`;
       <div className="flex items-center space-x-2 mb-3">
         <span className={`px-3 py-1 rounded text-xs font-semibold ${
           endpoint.method === 'GET' ? 'glass-ocean text-ocean-800' :
-          endpoint.method === 'POST' ? 'glass-aqua text-aqua-800' :
-          'glass text-deepBlue-800'
+          endpoint.method === 'POST' ? 'glass-coral text-coral-800' :
+          'glass-seaweed text-seaweed-800'
         }`}>
           {endpoint.method}
         </span>

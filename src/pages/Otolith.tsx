@@ -219,7 +219,7 @@ Date: ${new Date().toLocaleDateString()}`;
                   
                   <button 
                     onClick={handleDownloadReport}
-                    className="w-full glass-ocean text-white py-3 rounded-lg glow-hover transition-all duration-200 flex items-center justify-center space-x-2"
+                    className="w-full glass-fishOrange text-white py-3 rounded-lg glow-fishOrange transition-all duration-200 flex items-center justify-center space-x-2"
                   >
                     <Download className="w-4 h-4" />
                     <span>Download Report</span>
