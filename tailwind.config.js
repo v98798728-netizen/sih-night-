@@ -28,6 +28,7 @@ export default {
           800: '#155e75',
           900: '#164e63',
         },
+        // Deep blue restricted to accents only
         deepBlue: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -46,7 +47,7 @@ export default {
           200: '#fbd5c0',
           300: '#f8b896',
           400: '#f4926a',
-          500: '#fF7F5F1',
+          500: '#ff6f61',
           600: '#e25a2b',
           700: '#c04621',
           800: '#9a3a20',
@@ -77,16 +78,16 @@ export default {
           900: '#14532d',
         },
         sand: {
-          50: '#fefcf3',
-          100: '#fdf8e6',
-          200: '#faf0cc',
-          300: '#f6e4a8',
-          400: '#f1d484',
-          500: '#ebc560',
-          600: '#d4a942',
-          700: '#b08935',
-          800: '#8c6d2b',
-          900: '#725724',
+          50: '#fffdfb',
+          100: '#fff9f0', // <- softened sandy beige
+          200: '#fff3e0',
+          300: '#fce7c5',
+          400: '#f8dca5',
+          500: '#f4cf85',
+          600: '#e2b96a',
+          700: '#c99a52',
+          800: '#a1783d',
+          900: '#7c5a2d',
         }
       },
       backdropBlur: {
@@ -138,9 +139,9 @@ export default {
           border: '1px solid rgba(34, 197, 94, 0.15)',
         },
         '.glass-sand': {
-          background: 'rgba(235, 197, 96, 0.12)',
+          background: 'rgba(255, 249, 240, 0.12)', // lighter sand tone
           backdropFilter: 'blur(12px)',
-          border: '1px solid rgba(235, 197, 96, 0.2)',
+          border: '1px solid rgba(255, 249, 240, 0.2)',
         },
         '.glow-soft': {
           boxShadow: '0 0 20px rgba(14, 165, 233, 0.2), 0 0 40px rgba(240, 113, 66, 0.1)',
