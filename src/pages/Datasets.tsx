@@ -145,8 +145,8 @@ const Datasets = () => {
                     <td className="px-6 py-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                         dataset.type === 'Ocean' ? 'glass-ocean text-ocean-800' :
-                        dataset.type === 'Fisheries' ? 'glass-aqua text-aqua-800' :
-                        'glass text-deepBlue-800'
+                        dataset.type === 'Fisheries' ? 'glass-coral text-coral-800' :
+                        'glass-seaweed text-seaweed-800'
                       }`}>
                         {dataset.type}
                       </span>
@@ -162,21 +162,21 @@ const Datasets = () => {
                       <div className="flex items-center space-x-2">
                         <button 
                           onClick={() => handleDownload(dataset)}
-                          className="p-2 text-ocean-600 hover:glass-ocean hover:text-white rounded-lg glow-hover transition-all duration-200"
+                          className="p-2 text-coral-600 hover:glass-coral hover:text-white rounded-lg glow-coral transition-all duration-200"
                           title="Download dataset"
                         >
                           <Download className="w-4 h-4" />
                         </button>
                         <button 
                           onClick={() => handleView(dataset)}
-                          className="p-2 text-ocean-600 hover:glass-ocean hover:text-white rounded-lg glow-hover transition-all duration-200"
+                          className="p-2 text-seaweed-600 hover:glass-seaweed hover:text-white rounded-lg glow-seaweed transition-all duration-200"
                           title="View dataset details"
                         >
                           <Eye className="w-4 h-4" />
                         </button>
                         <button 
                           onClick={() => handleCite(dataset)}
-                          className="p-2 text-ocean-600 hover:glass-ocean hover:text-white rounded-lg glow-hover transition-all duration-200"
+                          className="p-2 text-fishOrange-600 hover:glass-fishOrange hover:text-white rounded-lg glow-fishOrange transition-all duration-200"
                           title="Copy citation"
                         >
                           <Quote className="w-4 h-4" />

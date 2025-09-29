@@ -404,10 +404,10 @@ const Visualization = () => {
               {viewMode === 'chart' && (
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* All charts in chart view */}
-                  <div className="glass p-6 rounded-2xl glow-soft">
+                  <div className="glass-sand p-6 rounded-2xl glow-soft">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-lg font-semibold text-ocean-800">Species Richness Over Time</h3>
-                      <Download className="w-4 h-4 text-ocean-600 cursor-pointer hover:scale-110 transition-transform glow-hover" onClick={() => downloadChart('species-richness')} />
+                      <Download className="w-4 h-4 text-ocean-600 cursor-pointer hover:scale-110 transition-transform hover:text-ocean-700" onClick={() => downloadChart('species-richness')} />
                     </div>
                     <ResponsiveContainer width="100%" height={250}>
                       <LineChart data={speciesRichnessData}>
@@ -426,10 +426,10 @@ const Visualization = () => {
                     </ResponsiveContainer>
                   </div>
 
-                  <div className="glass p-6 rounded-2xl glow-soft">
+                  <div className="glass-sand p-6 rounded-2xl glow-soft">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-lg font-semibold text-ocean-800">Fish Distribution by Region</h3>
-                      <Download className="w-4 h-4 text-ocean-600 cursor-pointer hover:scale-110 transition-transform glow-hover" onClick={() => downloadChart('fish-distribution')} />
+                      <Download className="w-4 h-4 text-fishOrange-600 cursor-pointer hover:scale-110 transition-transform hover:text-fishOrange-700" onClick={() => downloadChart('fish-distribution')} />
                     </div>
                     <ResponsiveContainer width="100%" height={250}>
                       <BarChart data={fishDistributionData}>
@@ -438,17 +438,17 @@ const Visualization = () => {
                         <YAxis tick={{ fontSize: 10 }} />
                         <Tooltip />
                         <Bar dataKey="tuna" fill="#0ea5e9" />
-                        <Bar dataKey="cod" fill="#06b6d4" />
-                        <Bar dataKey="salmon" fill="#3b82f6" />
-                        <Bar dataKey="mackerel" fill="#60a5fa" />
+                        <Bar dataKey="cod" fill="#f07142" />
+                        <Bar dataKey="salmon" fill="#22c55e" />
+                        <Bar dataKey="mackerel" fill="#ff7b1a" />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
 
-                  <div className="glass p-6 rounded-2xl glow-soft">
+                  <div className="glass-sand p-6 rounded-2xl glow-soft">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-lg font-semibold text-ocean-800">Depth vs Biodiversity</h3>
-                      <Download className="w-4 h-4 text-ocean-600 cursor-pointer hover:scale-110 transition-transform glow-hover" onClick={() => downloadChart('depth-biodiversity')} />
+                      <Download className="w-4 h-4 text-seaweed-600 cursor-pointer hover:scale-110 transition-transform hover:text-seaweed-700" onClick={() => downloadChart('depth-biodiversity')} />
                     </div>
                     <ResponsiveContainer width="100%" height={250}>
                       <ScatterChart data={biodiversityScatterData}>
@@ -456,15 +456,15 @@ const Visualization = () => {
                         <XAxis dataKey="depth" name="Depth" unit="m" tick={{ fontSize: 12 }} />
                         <YAxis dataKey="biodiversity" name="Biodiversity Index" tick={{ fontSize: 12 }} />
                         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                        <Scatter dataKey="biodiversity" fill="#0ea5e9" />
+                        <Scatter dataKey="biodiversity" fill="#22c55e" />
                       </ScatterChart>
                     </ResponsiveContainer>
                   </div>
 
-                  <div className="glass p-6 rounded-2xl glow-soft">
+                  <div className="glass-sand p-6 rounded-2xl glow-soft">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-lg font-semibold text-ocean-800">Temperature vs Species</h3>
-                      <Download className="w-4 h-4 text-ocean-600 cursor-pointer hover:scale-110 transition-transform glow-hover" onClick={() => downloadChart('temperature-species')} />
+                      <Download className="w-4 h-4 text-coral-600 cursor-pointer hover:scale-110 transition-transform hover:text-coral-700" onClick={() => downloadChart('temperature-species')} />
                     </div>
                     <ResponsiveContainer width="100%" height={250}>
                       <BarChart data={temperatureSpeciesData}>
@@ -472,7 +472,7 @@ const Visualization = () => {
                         <XAxis dataKey="temp" tick={{ fontSize: 10 }} />
                         <YAxis tick={{ fontSize: 10 }} />
                         <Tooltip />
-                        <Bar dataKey="species" fill="#06b6d4" />
+                        <Bar dataKey="species" fill="#f07142" />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -513,7 +513,7 @@ const Visualization = () => {
 
               {/* Bottom Comparison Section */}
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="glass p-6 rounded-2xl glow-soft">
+                <div className="glass-sand p-6 rounded-2xl glow-soft">
                   <h3 className="text-lg font-semibold text-ocean-800 mb-4">Top Species</h3>
                   <div className="space-y-3">
                     {topSpeciesData.slice(0, 3).map((species, index) => (
@@ -522,7 +522,7 @@ const Visualization = () => {
                         <div className="flex items-center space-x-2">
                           <div className="w-16 bg-gray-200 rounded-full h-2">
                             <div 
-                              className="bg-gradient-to-r from-ocean-500 to-aqua-500 h-2 rounded-full transition-all duration-500"
+                              className="bg-gradient-to-r from-coral-500 to-fishOrange-500 h-2 rounded-full transition-all duration-500"
                               style={{ width: `${species.percentage}%` }}
                             ></div>
                           </div>
@@ -533,7 +533,7 @@ const Visualization = () => {
                   </div>
                 </div>
                 
-                <div className="glass p-6 rounded-2xl glow-soft">
+                <div className="glass-sand p-6 rounded-2xl glow-soft">
                   <h3 className="text-lg font-semibold text-ocean-800 mb-4">Most Abundant Fish Types</h3>
                   <ResponsiveContainer width="100%" height={150}>
                     <BarChart data={abundantFishData} layout="horizontal">
@@ -542,21 +542,21 @@ const Visualization = () => {
                       <Tooltip />
                       <Bar dataKey="count">
                         {abundantFishData.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={index === 0 ? '#0ea5e9' : index === 1 ? '#06b6d4' : index === 2 ? '#3b82f6' : '#60a5fa'} />
+                          <Cell key={`cell-${index}`} fill={index === 0 ? '#0ea5e9' : index === 1 ? '#f07142' : index === 2 ? '#22c55e' : '#ff7b1a'} />
                         ))}
                       </Bar>
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
 
-                <div className="glass p-6 rounded-2xl glow-soft">
+                <div className="glass-sand p-6 rounded-2xl glow-soft">
                   <h3 className="text-lg font-semibold text-ocean-800 mb-4">Temperature vs Species</h3>
                   <ResponsiveContainer width="100%" height={150}>
                     <LineChart data={temperatureSpeciesData}>
                       <XAxis dataKey="temp" tick={{ fontSize: 10 }} />
                       <YAxis tick={{ fontSize: 10 }} />
                       <Tooltip />
-                      <Line type="monotone" dataKey="species" stroke="#06b6d4" strokeWidth={2} dot={{ r: 3 }} />
+                      <Line type="monotone" dataKey="species" stroke="#22c55e" strokeWidth={2} dot={{ r: 3 }} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -566,10 +566,10 @@ const Visualization = () => {
             {/* Right Panel - Charts */}
             <div className="space-y-6">
               {/* Species Richness Chart */}
-              <div className="glass p-6 rounded-2xl glow-soft">
+              <div className="glass-sand p-6 rounded-2xl glow-soft">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-ocean-800">Species Richness</h3>
-                  <Download className="w-4 h-4 text-ocean-600 cursor-pointer hover:scale-110 transition-transform glow-hover" onClick={() => downloadChart('species-richness')} />
+                  <Download className="w-4 h-4 text-ocean-600 cursor-pointer hover:scale-110 transition-transform hover:text-ocean-700" onClick={() => downloadChart('species-richness')} />
                 </div>
                 <ResponsiveContainer width="100%" height={200}>
                   <LineChart data={speciesRichnessData}>
@@ -583,10 +583,10 @@ const Visualization = () => {
               </div>
 
               {/* Fish Distribution Chart */}
-              <div className="glass p-6 rounded-2xl glow-soft">
+              <div className="glass-sand p-6 rounded-2xl glow-soft">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-ocean-800">Fish Distribution</h3>
-                  <BarChart3 className="w-4 h-4 text-ocean-600" />
+                  <BarChart3 className="w-4 h-4 text-fishOrange-600" />
                 </div>
                 <ResponsiveContainer width="100%" height={250}>
                   <BarChart data={fishDistributionData}>
@@ -595,18 +595,18 @@ const Visualization = () => {
                     <YAxis tick={{ fontSize: 10 }} />
                     <Tooltip />
                     <Bar dataKey="tuna" fill="#0ea5e9" />
-                    <Bar dataKey="cod" fill="#06b6d4" />
-                    <Bar dataKey="salmon" fill="#3b82f6" />
-                    <Bar dataKey="mackerel" fill="#60a5fa" />
+                    <Bar dataKey="cod" fill="#f07142" />
+                    <Bar dataKey="salmon" fill="#22c55e" />
+                    <Bar dataKey="mackerel" fill="#ff7b1a" />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
 
               {/* Biodiversity Scatter Plot */}
-              <div className="glass p-6 rounded-2xl glow-soft">
+              <div className="glass-sand p-6 rounded-2xl glow-soft">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-ocean-800">Depth vs Biodiversity</h3>
-                  <TrendingUp className="w-4 h-4 text-ocean-600" />
+                  <TrendingUp className="w-4 h-4 text-seaweed-600" />
                 </div>
                 <ResponsiveContainer width="100%" height={200}>
                   <ScatterChart data={biodiversityScatterData}>
@@ -614,7 +614,7 @@ const Visualization = () => {
                     <XAxis dataKey="depth" name="Depth" unit="m" tick={{ fontSize: 12 }} />
                     <YAxis dataKey="biodiversity" name="Biodiversity Index" tick={{ fontSize: 12 }} />
                     <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                    <Scatter dataKey="biodiversity" fill="#0ea5e9" />
+                    <Scatter dataKey="biodiversity" fill="#22c55e" />
                   </ScatterChart>
                 </ResponsiveContainer>
               </div>

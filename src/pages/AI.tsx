@@ -230,8 +230,8 @@ const AI = () => {
                 </div>
                 <div className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
                   message.type === 'user'
-                    ? 'glass-ocean text-white glow-soft'
-                    : 'glass text-gray-800'
+                    ? 'glass-coral text-white glow-coral'
+                    : 'glass-sand text-gray-800'
                 }`}>
                   <div
                     className="text-sm prose max-w-none"
@@ -248,14 +248,14 @@ const AI = () => {
             
             {isTyping && (
               <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 rounded-full glass-ocean flex items-center justify-center glow-soft">
+                <div className="w-8 h-8 rounded-full glass-seaweed flex items-center justify-center glow-seaweed">
                   <Bot className="w-4 h-4 text-white" />
                 </div>
-                <div className="glass px-4 py-2 rounded-lg">
+                <div className="glass-sand px-4 py-2 rounded-lg">
                   <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-ocean-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-ocean-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-ocean-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    <div className="w-2 h-2 bg-seaweed-400 rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-seaweed-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                    <div className="w-2 h-2 bg-seaweed-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                   </div>
                 </div>
               </div>
@@ -269,7 +269,11 @@ const AI = () => {
                 <button
                   key={index}
                   onClick={() => handleQuickAction(action.query)}
-                  className="flex items-center space-x-2 px-3 py-2 glass hover:glass-ocean hover:text-white rounded-lg glow-hover transition-all duration-200 text-sm"
+                  className={`flex items-center space-x-2 px-3 py-2 glass rounded-lg glow-hover transition-all duration-200 text-sm ${
+                    index % 3 === 0 ? 'hover:glass-ocean hover:text-white' :
+                    index % 3 === 1 ? 'hover:glass-coral hover:text-white' :
+                    'hover:glass-seaweed hover:text-white'
+                  }`}
                 >
                   <action.icon className="w-4 h-4" />
                   <span>{action.label}</span>
@@ -300,7 +304,7 @@ const AI = () => {
               <button
                 onClick={handleSendMessage}
                 disabled={!inputMessage.trim()}
-                className="glass-ocean text-white p-3 rounded-lg glow-hover transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="glass-coral text-white p-3 rounded-lg glow-coral transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <Send className="w-5 h-5" />
               </button>

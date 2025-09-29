@@ -39,6 +39,54 @@ export default {
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
+        },
+        coral: {
+          50: '#fef7f0',
+          100: '#fdeee0',
+          200: '#fbd5c0',
+          300: '#f8b896',
+          400: '#f4926a',
+          500: '#f07142',
+          600: '#e25a2b',
+          700: '#c04621',
+          800: '#9a3a20',
+          900: '#7c321f',
+        },
+        fishOrange: {
+          50: '#fff8f0',
+          100: '#ffeee0',
+          200: '#ffd9b8',
+          300: '#ffbe85',
+          400: '#ff9a4f',
+          500: '#ff7b1a',
+          600: '#f05d00',
+          700: '#c74700',
+          800: '#9e3800',
+          900: '#7f2e00',
+        },
+        seaweed: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+        },
+        sand: {
+          50: '#fefcf3',
+          100: '#fdf8e6',
+          200: '#faf0cc',
+          300: '#f6e4a8',
+          400: '#f1d484',
+          500: '#ebc560',
+          600: '#d4a942',
+          700: '#b08935',
+          800: '#8c6d2b',
+          900: '#725724',
         }
       },
       backdropBlur: {
@@ -70,24 +118,48 @@ export default {
           border: '1px solid rgba(255, 255, 255, 0.1)',
         },
         '.glass-ocean': {
-          background: 'rgba(14, 165, 233, 0.1)',
+          background: 'rgba(14, 165, 233, 0.08)',
           backdropFilter: 'blur(12px)',
-          border: '1px solid rgba(14, 165, 233, 0.2)',
+          border: '1px solid rgba(14, 165, 233, 0.15)',
         },
         '.glass-aqua': {
-          background: 'rgba(6, 182, 212, 0.1)',
+          background: 'rgba(6, 182, 212, 0.08)',
           backdropFilter: 'blur(12px)',
-          border: '1px solid rgba(6, 182, 212, 0.2)',
+          border: '1px solid rgba(6, 182, 212, 0.15)',
+        },
+        '.glass-coral': {
+          background: 'rgba(240, 113, 66, 0.08)',
+          backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(240, 113, 66, 0.15)',
+        },
+        '.glass-seaweed': {
+          background: 'rgba(34, 197, 94, 0.08)',
+          backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(34, 197, 94, 0.15)',
+        },
+        '.glass-sand': {
+          background: 'rgba(235, 197, 96, 0.12)',
+          backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(235, 197, 96, 0.2)',
         },
         '.glow-soft': {
-          boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)',
+          boxShadow: '0 0 20px rgba(14, 165, 233, 0.2), 0 0 40px rgba(240, 113, 66, 0.1)',
         },
         '.glow-hover': {
           transition: 'all 0.3s ease',
           '&:hover': {
-            boxShadow: '0 0 30px rgba(14, 165, 233, 0.4)',
+            boxShadow: '0 0 30px rgba(14, 165, 233, 0.3), 0 0 50px rgba(240, 113, 66, 0.15)',
             transform: 'translateY(-2px)',
           }
+        },
+        '.glow-coral': {
+          boxShadow: '0 0 20px rgba(240, 113, 66, 0.3)',
+        },
+        '.glow-seaweed': {
+          boxShadow: '0 0 20px rgba(34, 197, 94, 0.3)',
+        },
+        '.glow-fishOrange': {
+          boxShadow: '0 0 20px rgba(255, 123, 26, 0.3)',
         }
       }
       addUtilities(newUtilities)

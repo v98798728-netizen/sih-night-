@@ -21,11 +21,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* 2. This Link wrapper makes the name and icon clickable, taking the user to the homepage. */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-ocean-600 to-deepBlue-700 rounded-lg flex items-center justify-center glow-soft">
+            <div className="w-8 h-8 bg-gradient-to-br from-ocean-600 to-coral-600 rounded-lg flex items-center justify-center glow-soft">
               <Fish className="w-5 h-5 text-white" />
             </div>
             {/* 3. Changed the website name to "Shark" */}
-            <span className="text-xl font-semibold text-ocean-800">Shark</span>
+            <span className="text-xl font-semibold text-gray-800">Shark</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -35,8 +35,8 @@ const Header = () => {
                 to={path}
                 className={`flex items-center space-x-2 text-sm font-medium transition-all duration-200 hover:text-[#30345E] ${
                   location.pathname === path
-                    ? 'text-ocean-700 border-b-2 border-ocean-500 pb-1 glow-soft'
-                    : 'text-ocean-600 hover:border-b-2 hover:border-ocean-500 hover:pb-1 hover:glow-soft'
+                    ? 'text-coral-700 border-b-2 border-coral-500 pb-1 glow-coral'
+                    : 'text-gray-600 hover:border-b-2 hover:border-coral-500 hover:pb-1 hover:glow-coral'
                 }`}
               >
                 {Icon && <Icon className="w-4 h-4" />}
